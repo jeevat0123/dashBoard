@@ -1,0 +1,35 @@
+<div class="flex-container ">
+    <div class="base">
+        <div class="">
+            <img width="140px" src="../assets/images/dsnl-logo.png" alt="logo">
+        </div>
+        <div class="i-am-centered2">
+            <h2><b>Live Monitoring</b></h2>
+        </div>
+        <div *ngIf="login_Validate; else loading">
+            <div class="login">
+                <div style="text-align:center;line-height: 28px;" class="i-am-centered">
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+                        <input style="margin-bottom: 10px;  outline: 0;border-width: 0 0 2px;border-color: black;" placeholder="User ID" type="text" formControlName="userID"> <br> 
+                        <input style="margin-bottom: 10px;  outline: 0;border-width: 0 0 2px;border-color: black;" placeholder="User password" type="password" formControlName="password" > <br> 
+                        <button style="margin-bottom: 10px;border-radius:5px;border-color: #00adef;width: 60px;background-color: #217ba0;color: white;box-sizing: border-box;"> Login </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <ng-template #loading>
+            <div class="i-am-centered3">
+                <p style="font-size: 45px;"><b>{{callName}}</b></p>
+            </div>
+            <div class="row i-am-centered"> 
+                <!-- <h2 style="margin: auto;max-width: 220px; text-align: center;font-size: 45px;"><b>{{callName}}</b></h2> -->
+                <button class="btn btn-primary btn-lg"><b>Total</b><p>{{total}}</p></button>
+                <button class="btn btn-primary btn-lg"><b>Connected</b><p>{{connected}}</p></button>
+                <button class="btn btn-primary btn-lg"><b>Not Connected</b><p>{{notConnected}}</p></button>
+                <div class="i-am-centered3">
+                    <button (click)="logout()" style="margin-top: 80px;border-radius:5px;border-color: #00adef;width: 150px;    color: white;background-color: #217ba0;box-sizing: border-box;"> LogOut </button>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>

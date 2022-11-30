@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <img style="width:20% ;" class="img-fluid d-flex justify-content-start rounded mx-auto  " src="../../assets/images/dsnl-logo.png" alt="DSNL">
+  </div>
+  <div class="row">
+    <!-- <h3 class="h-100 d-flex justify-content-center"><b><u>Index</u></b></h3> -->
+  </div>
+  <div class="row">
+    <div class="h-100 d-flex justify-content-center">
+      <tbody>
+        <tr class="d-flex justify-content-center" *ngFor="let arr of allMenuData; let i = index">
+          <td> <button  class="btn " (click)="menuReq(arr.report_name)">{{ arr.report_name | titlecase  }}</button></td>
+        </tr>
+        <tr class="d-flex justify-content-center">
+          <td> <button  class="btn " (click)="logout()" >LogOut</button></td>
+	</tr>
+      </tbody>
+    </div>
+  </div>
+</div>
+

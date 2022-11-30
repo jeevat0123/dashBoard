@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <img style="width:15% ;" class="img-thumbnail d-flex justify-content-start rounded mx-auto d-block " src="../../assets/images/dsnl-logo.png" alt="DSNL">
+  </div>
+  <div class="row">
+    <h3 class="h-100 d-flex justify-content-center"><b><u>Location</u></b></h3>
+  </div>
+  <div class="row">
+    <div class="h-100 d-flex justify-content-center">
+      <tbody>
+        <tr class="d-flex justify-content-center" *ngFor="let arr of allLocationData; let i = index">
+          <td> <button  class="btn " (click)="locationReq(arr.Branch)">{{ arr.Branch | titlecase  }}</button></td>
+        </tr>
+        <tr class="d-flex justify-content-center">
+          <td> <button  class="btn "  routerLink="/menu">Back</button></td>
+	</tr>
+      </tbody>
+    </div>
+  </div>
+</div>
+

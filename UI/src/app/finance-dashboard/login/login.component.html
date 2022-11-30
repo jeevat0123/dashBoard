@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="h-100 d-flex justify-content-center">
+    <div class="row">
+      <div class="col">
+        <br><br>
+        <div class="card" style="width: 18rem;padding-bottom: 35px;">
+          <img style="padding: 35px;" class="rounded mx-auto d-block " src="../../assets/images/dsnl-logo.png" alt="DSNL">
+          
+          <!-- <h3><b class="login"><u>Login</u></b></h3> -->
+          <div class="card-body">
+            <form #userLogin = "ngForm" (ngSubmit) = "onClickSubmit(userLogin.value)" >
+              <div class="form-group">
+                <!-- <label class="d-flex justify-content-start" for="exampleInputEmail">Email Id:</label> -->
+                <input style="margin-bottom:10px ;" class="form-control  form-control-sm" id="exampleInputEmail" type = "text" name = "emailId" placeholder = "Email" ngModel>
+              </div>
+              <div class="form-group">
+                <!-- <label class="d-flex justify-content-start" for="exampleInputPassword1">Password:</label> -->
+                <input class="form-control  form-control-sm" id="exampleInputPassword1" type = "password" name = "passwd" placeholder = "Password" ngModel>
+              </div>
+              <div class="form-group text-center" style="height:50px; padding:25px;">
+                <input class="btn btn-primary text-center" type = "submit" value = "Login">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
